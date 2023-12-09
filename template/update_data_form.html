@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'cdnlines.html' %}
+    <title>Document</title>
+</head>
+<body>
+    <h2> student update details</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-6">
+                <form action="{% url 'save_update_data' sd.id %}" method="post">{% csrf_token %}
+                    <label for="">Entr firstname</lable>
+                    <input type="text" name="fname" value="{{sd.fname}}" class="form-control">
+                    <label for="">Entr lastname</lable>
+                    <input type="text" name="lname" value="{{sd.lname}}" class="form-control">
+                    <label for="">Entr email</lable>
+                    <input type="email" name="email" value="{{sd.email}}" class="form-control">
+                    <label for="">Entr mobile</lable>
+                    <input type="number" name="mobile" value="{{sd.mobile}}" class="form-control">
+                    <label for="">Entr marks1</lable>
+                    <input type="number" name="marks1" value="{{sd.marks1}}" class="form-control">
+                    <label for="">Entr marks2</lable>
+                    <input type="number" name="marks2" value="{{sd.marks2}}" class="form-control">
+                    <label for="">Entr marks3</lable>
+                    <input type="number" name="marks3" value="{{sd.marks3}}" class="form-control">
+                    <label for="">Entr marks4</lable>
+                    <input type="nuumber" name="marks4" value="{{sd.marks4}}" class="form-control">
+                    <centre> <input type="Submit" value="submit" class="btn btn-primary">
+                    <input type="reset" value="cancel" class="btn btn-warning"></centre>    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
